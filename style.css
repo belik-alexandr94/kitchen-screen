@@ -1,16 +1,10 @@
-
-body {
-    margin: 0;
-    font-family: 'Roboto';
-    font-size: 14px;
-    line-height: 1.3em;
-    background: url('fon_day.jpg') no-repeat center center;
-    background-size: cover;
-}
 .ui {
-    height: calc(100vh - 10px);
+    height: calc(100vh - 60px);
+    padding-top: 10px;
     display: grid;
-    grid-template-rows: 40px 50px 1fr;
+    display: -ms-grid;
+    grid-template-rows: auto;
+    -ms-grid-rows: auto;
     color: #eee;
 }
 .navbar {
@@ -28,6 +22,7 @@ body {
 .lists {
     display: flex;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .lists > * {
     flex: 0 0 auto;
@@ -39,38 +34,35 @@ body {
 }
 .list {
     width: 300px;
-    height: calc(100% - 10px - 17px);
+    height: calc(100vh - 30px - 40px);
 }
 .list > * {
-    background-color: rgba(226, 228, 230, 0.9);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.3), 0 1px 0 rgba(0,0,0,0.24);
     color: #333;
     padding: 0 10px;
 }
 .list header {
+    box-shadow: none;
     line-height: 36px;
     font-size: 16px;
     font-weight: bold;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
 }
 .list footer {
     line-height: 36px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     color: #888;
 }
 .list ul {
+    -ms-overflow-y: scroll; -ms-overflow-style: scrollbar; -webkit-overflow-scrolling: touch;
+    box-shadow: none;
     list-style: none;
     margin: 0;
-    max-height: calc(100% - 36px - 36px);
-    overflow-y: auto;
+    max-height: calc(100vh - 76px - 76px);
+    overflow:auto;
 }
-
-
 .list ul li {
-    background-color: #fff;
+    background-color: #ddd;
     padding: 10px;
-    border-radius: 3px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 /*cooking status classes*/
@@ -138,4 +130,3 @@ ul::-webkit-scrollbar-thumb
     border-radius: 10px;
     background-color:  rgba(0,0,0, 0.5);
 }
-
